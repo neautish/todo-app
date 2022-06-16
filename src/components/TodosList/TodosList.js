@@ -15,8 +15,8 @@ function TodosList(props) {
 				return (
 					<li key={todo.id} className={classes["todo"]}>
 						<h3 className={classes["todo__title"]}>{todo.title}</h3>
-						<button className={classes["todo__delete"]} onClick={() => deleteHandler(todo.id)}>
-							<CrossIcon />
+						<button className={`${classes["todo__delete"]} ${classes["todo-btn"]}`} onClick={() => deleteHandler(todo.id)}>
+							<CrossIcon className={classes.icon} />
 						</button>
 					</li>
 				);
