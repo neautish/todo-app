@@ -7,7 +7,7 @@ import TodosList from "./components/TodosList/TodosList";
 const reducer = function (state, action) {
 	switch (action.type) {
 		case "add-todo":
-			return [...state, { title: action.title, id: action.id }];
+			return [{ title: action.title, id: action.id }, ...state];
 		case "delete":
 			return state.filter((item) => item.id !== action.id);
 		default:

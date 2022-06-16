@@ -1,5 +1,7 @@
 import React from "react";
 
+import { ReactComponent as CheckIcon } from "../../images/check.svg";
+import { ReactComponent as CrossIcon } from "../../images/cross.svg";
 import classes from "./TodosList.module.css";
 
 function TodosList(props) {
@@ -14,7 +16,7 @@ function TodosList(props) {
 					<li key={todo.id} className={classes["todo"]}>
 						<h3 className={classes["todo__title"]}>{todo.title}</h3>
 						<button className={classes["todo__delete"]} onClick={() => deleteHandler(todo.id)}>
-							X
+							<CrossIcon />
 						</button>
 					</li>
 				);

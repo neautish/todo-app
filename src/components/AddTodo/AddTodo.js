@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import { ReactComponent as PlusIcon } from "../../images/plus.svg";
 import classes from "./AddTodo.module.css";
 
 function AddTodo(props) {
@@ -19,7 +20,9 @@ function AddTodo(props) {
 			<div className={classes["form-group"]}>
 				<label htmlFor="inputTitle"></label>
 				<input onChange={inputChangeHandler} id="inputTitle" placeholder="Enter Your Todo" value={todo} />
-				<button type="submit">Add Todo</button>
+				<button type="submit">
+					<PlusIcon className={classes.icon} />
+				</button>
 			</div>
 		</form>
 	);

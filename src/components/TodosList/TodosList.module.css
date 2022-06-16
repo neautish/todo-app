@@ -1,0 +1,18 @@
+.todo-list {
+	list-style: none;
+	margin-top: 2rem;
+}
+
+.todo {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	color: #1d3557;
+	font-size: 0.8rem;
+	background-color: #f1faee;
+	padding: 0.5rem;
+	border-radius: 3px;
+}
+.todo:not(:last-child) {
+	margin-bottom: 0.5rem;
+}
