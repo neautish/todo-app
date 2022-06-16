@@ -1,0 +1,16 @@
+.form-group {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 2.5rem;
+	width: 100%;
+}
+
+.form-group input {
+	height: 100%;
+	flex: 1;
+}
+
+.form-group button {
+	height: 100%;
+}

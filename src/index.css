@@ -11,5 +11,6 @@ html {
 }
 
 body {
-	background-color: #eee;
+	height: 100vh;
+	background-image: linear-gradient(110deg, rgb(69, 123, 157), rgb(29, 53, 87));
 }
