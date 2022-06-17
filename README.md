@@ -1,5 +1,5 @@
-# A simple Todo react app with useReducer
-# LiveURL: https://todo-reactjs-neautish.netlify.app/
+- A simple Todo react app with useReducer
+- LiveURL: https://todo-reactjs-neautish.netlify.app/
 
 # Getting Started with Create React App
 
