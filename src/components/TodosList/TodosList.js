@@ -37,24 +37,29 @@ function TodosList(props) {
 					);
 				})}
 			</ul>
-			<ul className={classes["todo-list-completed"]}>
-				<h4 className={classes["completed-todo__title"]}>COMPLETED TODO'S</h4>
-				{props.items.map((todo) => {
-					return (
-						todo.complete && (
-							<li key={todo.id} className={`${classes["todo"]} ${classes["todo-complete"]}`}>
-								<h4 className={`${classes["todo__title"]} ${classes["todo__title--complete"]}`}>{todo.title}</h4>
-								<div className={classes["btn-groups"]}>
-									<span style={{ color: "#76c893" }}>DONE!</span>
-									<button className={`${classes["todo__delete"]} ${classes["todo-btn"]}`} onClick={() => deleteHandler(todo.id)}>
-										<CrossIcon className={classes.icon} />
-									</button>
-								</div>
-							</li>
-						)
-					);
-				})}
-			</ul>
+			{props.items.some((item) => item.complete) && (
+				<ul className={classes["todo-list-completed"]}>
+					<h4 className={classes["completed-todo__title"]}>COMPLETED TODO'S</h4>
+					{props.items.map((todo) => {
+						return (
+							todo.complete && (
+								<li key={todo.id} className={`${classes["todo"]} ${classes["todo-complete"]}`}>
+									<h4 className={`${classes["todo__title"]} ${classes["todo__title--complete"]}`}>{todo.title}</h4>
+									<div className={classes["btn-groups"]}>
+										<span style={{ color: "#76c893" }}>DONE!</span>
+										<button
+											className={`${classes["todo__delete"]} ${classes["todo-btn"]}`}
+											onClick={() => deleteHandler(todo.id)}
+										>
+											<CrossIcon className={classes.icon} />
+										</button>
+									</div>
+								</li>
+							)
+						);
+					})}
+				</ul>
+			)}
 		</Fragment>
 	);
 }

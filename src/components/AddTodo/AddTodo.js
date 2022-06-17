@@ -21,7 +21,7 @@ function AddTodo(props) {
 		<form className={classes.form} onSubmit={submitHandler}>
 			<div className={classes["form-group"]}>
 				<label htmlFor="inputTitle"></label>
-				<input onChange={inputChangeHandler} id="inputTitle" placeholder="Enter Your Todo" value={todo} />
+				<input onChange={inputChangeHandler} id="inputTitle" placeholder="Enter Your Todo" value={todo} required />
 				<button type="submit">
 					<PlusIcon className={classes.icon} />
 				</button>
