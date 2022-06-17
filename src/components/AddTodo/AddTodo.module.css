@@ -1,10 +1,14 @@
+.form {
+	margin-bottom: 2rem;
+}
+
 .form-group {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	height: 2.5rem;
+	height: 3rem;
 	width: 100%;
-	border-radius: 5px;
+	border-radius: 3px;
 	overflow: hidden;
 	position: relative;
 }
@@ -12,11 +16,13 @@
 .form-group input {
 	height: 100%;
 	flex: 1;
-	padding: 0 1rem;
+	padding: 0 4rem 0 0.5rem;
 	border: 2px solid transparent;
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
 	outline: 0;
+	font-family: inherit;
+	font-size: 1rem;
 }
 .form-group input:focus {
 	border: 2px solid #457b9d;
@@ -32,6 +38,7 @@
 	cursor: pointer;
 	position: absolute;
 	right: 0;
+	transition: all 0.2s;
 }
 .form-group button:hover {
 	background-color: #264167;

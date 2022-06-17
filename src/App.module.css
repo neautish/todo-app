@@ -5,3 +5,7 @@
 	border-radius: 2px;
 	background-color: #a8dadc;
 }
+
+.no-todo-message {
+	text-align: center;
+}

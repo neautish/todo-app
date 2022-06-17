@@ -13,10 +13,12 @@ function AddTodo(props) {
 	const submitHandler = function (e) {
 		e.preventDefault();
 		props.onAddTodo(todo);
+
+		setTodo("");
 	};
 
 	return (
-		<form onSubmit={submitHandler}>
+		<form className={classes.form} onSubmit={submitHandler}>
 			<div className={classes["form-group"]}>
 				<label htmlFor="inputTitle"></label>
 				<input onChange={inputChangeHandler} id="inputTitle" placeholder="Enter Your Todo" value={todo} />
