@@ -6,23 +6,19 @@ import TodosList from "./components/TodosList/TodosList";
 
 const reducer = function (state, action) {
 	switch (action.type) {
-		case "add-todo":
+		case "ADD_TODO":
 			const addedState = [{ title: action.title, id: action.id, complete: action.complete }, ...state];
 			localStorage.setItem("todos", JSON.stringify(addedState));
 			return addedState;
-		case "delete":
+		case "DELETE_TODO":
 			const deletedState = state.filter((item) => item.id !== action.id);
 			localStorage.setItem("todos", JSON.stringify(deletedState));
 			return deletedState;
-		case "complete":
+		case "COMPLETE_TODO":
 			const setComplete = state.filter((item) => item.id === action.id);
 			const others = state.filter((item) => item.id !== action.id);
 			setComplete[0]["complete"] = action.complete;
-			console.log(setComplete);
 			const completedState = [...others, ...setComplete];
-			// state.forEach((item) => {
-			// 	item.id === action.id && (item["complete"] = action.complete);
-			// });
 			localStorage.setItem("todos", JSON.stringify(completedState));
 			return completedState;
 		default:
@@ -36,7 +32,7 @@ function App() {
 
 	const AddTodoHandler = function (todo) {
 		todoDispatch({
-			type: "add-todo",
+			type: "ADD_TODO",
 			title: todo,
 			id: Math.random().toString(),
 			complete: false,
@@ -45,14 +41,14 @@ function App() {
 
 	const deleteHandler = function (id) {
 		todoDispatch({
-			type: "delete",
+			type: "DELETE_TODO",
 			id: id,
 		});
 	};
 
 	const completeHandler = function (id) {
 		todoDispatch({
-			type: "complete",
+			type: "COMPLETE_TODO",
 			id: id,
 			complete: true,
 		});
